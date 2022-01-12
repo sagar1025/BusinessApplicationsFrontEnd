@@ -1,7 +1,6 @@
 import Alert from 'react-bootstrap/Alert';
 import { Link } from "react-router-dom";
 import CurrentApps from '../components/currentApps'
-//import AppForm from './components/appForm'
 import { useGetAllApplicationsQuery } from '../hooks/applicationsApi'
 
 export default function Home() {
@@ -13,10 +12,10 @@ export default function Home() {
             <div className="col col-md-10 mx-auto">
             <Link className="btn btn-primary mb-4" to="/newApp">Create new Application</Link>
             {
-            data && data.length > 0 ?
-            <CurrentApps apps={data} />
-            :
-            <Alert variant="primary">No Records Exist</Alert>
+                data && data.length > 0 ?
+                <CurrentApps apps={data} />
+                :
+                <Alert variant="primary">No Records Exist</Alert>
             }
             </div>
         </div>

@@ -6,11 +6,6 @@ import { usePostApplicationMutation } from '../hooks/applicationsApi'
 //import { useHistory } from 'react-router-dom';
 import { useState } from 'react'
 
-// const SubmitForm = (formData) => {
-//   const { data, error, isLoading } = usePostApplicationMutation(JSON.stringify(formData));
-//   console.log(data);
-//   return data;
-// }
 
 function AppForm() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -18,13 +13,13 @@ function AppForm() {
   //const history = useHistory();
   //const dispatch = useDispatch();
   //const [formData, setFormData] = useState({});
-  console.log(usePostApplicationMutation());
+
   const [error, setError] = useState('');
-  const [sendApp, {isLoading: isUpdating }, isError] = usePostApplicationMutation();
+  const [sendApp, { isLoading: isUpdating }, isError] = usePostApplicationMutation();
 
   const onSubmit = async (formData) => {
     const result = await sendApp(formData);
-    console.log(result)
+    //console.log(result)
     //console.log(isError);
     if(result) {
       if(result.data && result.data.success) {
@@ -41,7 +36,7 @@ function AppForm() {
   //console.log(watch("email"));
   return(
     <form onSubmit={handleSubmit(onSubmit)} method="POST">
-      {/* register your input into the hook by invoking the "register" function */}
+
       <Form.Group className="mb-3">
         <label className="form-label">Business Name</label>
         <input 
@@ -88,7 +83,7 @@ function AppForm() {
           <option value="75000">$75,000</option>
           <option value="100000">$100,000</option>
           <option value="150000">$150,000</option>
-          <option value="300000">$200,000</option>
+          <option value="200000">$200,000</option>
         </select>
         {errors.annualSales && <Alert variant="danger">This field is required</Alert>}
       </Form.Group>
