@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+#### Note: Nodejs version used is 16.13.2 and npm version is 8.1.2
+
 ## Installing npm packages
 
 Before starting the app, please install the npm packages by running the command:
