@@ -20,13 +20,13 @@ export default function CurrentApps({ apps }){
                 return (
                 <tr key={idx}>
                     <th scope="row">{++idx}</th>
-                    <td>{app.BusinessName}</td>
-                    <td>{app.Industry}</td>
-                    <td>{app.Email}</td>
-                    <td>${app.AnnualSales.toLocaleString()}</td>
-                    <td>${app.AnnualPayroll.toLocaleString()}</td>
-                    <td>{app.NumberOfEmployees}</td>
-                    <td>{app.ZipCode}</td>
+                    <td>{app.BusinessName || ''}</td>
+                    <td>{app.Industry || ''}</td>
+                    <td>{app.Email || ''}</td>
+                    <td>${app.AnnualSales.toLocaleString() || ''}</td>
+                    <td>${app.AnnualPayroll.toLocaleString() || ''}</td>
+                    <td>{app.NumberOfEmployees || ''}</td>
+                    <td>{app.ZipCode || ''}</td>
                 </tr>
                 )
             })}
