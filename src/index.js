@@ -9,6 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NewForm from './routes/newForm';
 import Home from './routes/home';
+import NotFound from './routes/notfound';
+
 
 ReactDOM.render(
   <BrowserRouter>
@@ -16,6 +18,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="newApp" element={<NewForm />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <App />
     </Provider>
