@@ -11,8 +11,6 @@ function AppForm() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   //const { data, error, isLoading } = usePostApplicationMutation();
   //const history = useHistory();
-  //const dispatch = useDispatch();
-  //const [formData, setFormData] = useState({});
 
   const [error, setError] = useState('');
   const [sendApp, { isLoading: isUpdating }, isError] = usePostApplicationMutation();
